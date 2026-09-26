@@ -1,0 +1,104 @@
+name: Kayji-HotPotato
+main: com.kayjifamily.hotpotatoadvanced.HotPotatoFull
+version: 2.0
+api-version: 1.20
+website: https://discord.gg/ZsB7ecppf2
+author: Kayji_Tizi
+softdepend: [Vault]
+description: "Hot Potato mini-game with countdowns, square zone, points and visual effects."
+
+commands:
+  hotpotato:
+    description: Start the Hot Potato match
+    usage: /hotpotato
+    permission: hotpotato.start
+  hotpotatoreset:
+    description: Stop the match and reset state
+    usage: /hotpotatoreset
+    permission: hotpotato.reset
+  hotpotatopoints:
+    description: Show player points
+    usage: /hotpotatopoints
+    permission: hotpotato.points
+  hotpotatoexpand:
+    description: Expand the square zone by 5 blocks
+    usage: /hotpotatoexpand
+    permission: hotpotato.resize
+  hotpotatoshrink:
+    description: Shrink the square zone by 5 blocks
+    usage: /hotpotatoshrink
+    permission: hotpotato.resize
+  hotpotatotimeadd:
+    description: Add 5 seconds to the bomb timer
+    usage: /hotpotatotimeadd
+    permission: hotpotato.time
+  hotpotatotimereduce:
+    description: Remove 5 seconds from the bomb timer
+    usage: /hotpotatotimereduce
+    permission: hotpotato.time
+  hotpotatotogglekill:
+    description: Toggle killing the holder on explosion
+    usage: /hotpotatotogglekill
+    permission: hotpotato.togglekill
+  hotpotatoleader:
+    description: Open the leaderboard GUI
+    usage: /hotpotatoleader
+    permission: hotpotato.leader
+  hotpotataconfig:
+    description: Open the in-game configuration GUI
+    usage: /hotpotatoconfig
+    permission: hotpotato.config
+  hotpotatozone:
+    description: Set or clear the square zone center and radius
+    usage: /hotpotatozone <set|clear> [radius]
+    permission: hotpotato.zone
+  hotpotatotop:
+    description: Show the top Hot Potato champions
+    usage: /hotpotatotop
+    permission: hotpotato.top
+  hotpotatoreward:
+    description: Open your personal Hot Potato reward stash
+    usage: /hotpotatoreward
+    permission: hotpotato.reward
+  hotpotatorewardsetup:
+    description: Open the admin reward pool editor
+    usage: /hotpotatorewardsetup
+    permission: hotpotato.reward.setup
+
+permissions:
+  hotpotato.start:
+    description: Allows starting the match
+    default: op
+  hotpotato.reset:
+    description: Allows resetting the match
+    default: op
+  hotpotato.points:
+    description: Allows viewing points
+    default: true
+  hotpotato.resize:
+    description: Allows resizing the zone
+    default: op
+  hotpotato.time:
+    description: Allows changing the explosion timer
+    default: op
+  hotpotato.togglekill:
+    description: Allows toggling kill-on-explode
+    default: op
+  hotpotato.leader:
+    description: Allows opening the leaderboard GUI
+    default: true
+  hotpotato.config:
+    description: Allows opening the configuration GUI
+    default: op
+  hotpotato.zone:
+    description: Allows configuring the square zone
+    default: op
+  hotpotato.top:
+    description: Allows viewing the Hot Potato winner leaderboard
+    default: true
+  hotpotato.reward:
+    description: Allows accessing the personal reward stash
+    default: true
+  hotpotato.reward.setup:
+    description: Allows configuring the reward pool
+    default: op

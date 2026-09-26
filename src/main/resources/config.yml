@@ -1,0 +1,74 @@
+explosion_time: 20
+explosion_power: 2.0
+lightning_effect: true
+sound_effect: true
+point_system: true
+use_action_bar: true
+randomize_timer: false
+reset_timer_on_pass: false
+auto_restart: false
+zone_radius: 15
+min_zone_radius: 5
+zone_shrink_enabled: false
+zone_shrink_rate: 1
+
+leaderboard:
+  gui_size: 9
+  broadcast_top: 3
+
+effects:
+  countdown_sounds: true
+  cinematic_explosion: true
+  particle_trail: true
+  zone:
+    pulse_interval: 10
+    particle: REDSTONE
+    color: "#FF4500"
+    extra_outline: true
+
+modes:
+  default: "normal"
+  available: ["normal","freeze","tag","lms"]
+
+stats:
+  discord_webhook: ""
+  broadcast_summary: true
+
+config_gui:
+  title: "HotPotato Config"
+
+pass_protection:
+  enabled: true
+  min_hold_time: 3
+  no_pass_last_seconds: 3
+  receive_cooldown: 2
+
+points_per_survival: 1
+
+rewards:
+  enabled: true
+  announce: true
+  winners: "all" # all or random
+  stash_rows: 3
+  money:
+    enabled: true
+    min: 250
+    max: 2000
+  tokens:
+    enabled: true
+    min: 1
+    max: 3
+  items:
+    enabled: true
+    entries:
+      - material: "DIAMOND"
+        amount: 2
+        chance: 0.35
+      - material: "GOLDEN_APPLE"
+        amount: 1
+        chance: 0.25
+  weights:
+    money: 50
+    items: 50
+    tokens: 25
+
